@@ -110,7 +110,7 @@ window.onload = function()
             for ( i = 0 ; i < types.length ; i++ )
             {
                 if ( alltypes.includes (types[i].innerHTML ) == false )
-			for ( po = 0 ; $ po < types[i].innerHTML.split(', ').length )
+			for ( po = 0 ; po < types[i].innerHTML.split(', ').length )
                     		alltypes.push (types[i].innerHTML.split(', ')[po]);
             }
 
@@ -120,7 +120,7 @@ window.onload = function()
             for ( i = 0 ; i < categories.length ; i++ )
             {
                 if ( allcategories.includes (categories[i].innerHTML ) == false )
-			for ( po = 0 ; $ po < categories[i].innerHTML.split(', ').length )
+			for ( po = 0 ; po < categories[i].innerHTML.split(', ').length )
 				allcategories.push (categories[i].innerHTML.split(', ')[po]);
             }
 
