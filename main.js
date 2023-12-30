@@ -111,7 +111,8 @@ window.onload = function()
             {
                 if ( alltypes.includes (types[i].innerHTML ) == false )
 			for ( po = 0 ; po < types[i].innerHTML.split(', ').length ; po++ )
-                    		alltypes.push (types[i].innerHTML.split(', ')[po]);
+				if ( !alltypes.includes( types[i].innerHTML.split(', ')[po]) ) 
+        	            		alltypes.push (types[i].innerHTML.split(', ')[po]);
             }
 
 
@@ -121,7 +122,8 @@ window.onload = function()
             {
                 if ( allcategories.includes (categories[i].innerHTML ) == false )
 			for ( po = 0 ; po < categories[i].innerHTML.split(', ').length ; po++ )
-				allcategories.push (categories[i].innerHTML.split(', ')[po]);
+				if ( !allcategories.includes( categories[i].innerHTML.split(', ')[po]) ) 
+					allcategories.push (categories[i].innerHTML.split(', ')[po]);
             }
 
             allcategories.sort();
