@@ -49,7 +49,7 @@ function filtering ( e , a )
     {
         var n = 0;
 
-        if ( testi3[ p ].children[3].innerText == searchcategory && searchcategory != categories_all ) n = n + 1;
+        if ( testi3[ p ].children[3].innerText.includes(searchcategory) && searchcategory != categories_all ) n = n + 1;
             else
             {
                 if ( searchcategory == categories_all ) n = n + 1;
@@ -61,7 +61,7 @@ function filtering ( e , a )
                 if ( searchcompany == companies_all ) n = n + 1;
                     //else n = n* 0;
             }
-        if ( testi3[ p ].children[6].innerText == searchtype && searchtype != types_all ) n = n + 1;
+        if ( testi3[ p ].children[6].innerText.includes(searchtype) && searchtype != types_all ) n = n + 1;
             else
             {
                 if ( searchtype == types_all ) n = n + 1;
