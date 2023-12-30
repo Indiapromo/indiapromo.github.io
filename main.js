@@ -12,7 +12,7 @@ function showallinfo()
     }
     
     filter = document.getElementById('allsort');
-    filter.innerHTML = 'Всего найдено: ' + document.getElementsByClassName ("gs_kupon").length;
+    filter.innerHTML = 'Showing: ' + document.getElementsByClassName ("gs_kupon").length;
 
     //document.getElementsByClassName('sort_by_category')[0].selectedIndex = 0
     document.getElementsByClassName( 'sort_by_company' )[0].selectedOptions[0].selectedIndex = 0 ;
@@ -78,7 +78,7 @@ function filtering ( e , a )
         //console.log ( 'dasda' + n );
         
         fr = document.getElementById('allsort');
-        filter.innerHTML = 'Найдено подходящих: ' + searchcount;
+        filter.innerHTML = 'Filtered: ' + searchcount;
 
 
     }
@@ -128,16 +128,16 @@ window.onload = function()
 
 
 
-	categoryselect = '<div><span>Сортировка по категории</span>		    <select id="categories" name="categories" method="post" class="sort_by_category" onchange="filtering( this , this.className )">				<option value="pusto" class="filter_action">				Все категории				</option><option value="pusto" class="filter_action">' + allcategories.join ('<option class="filter_action">') + '</option>' +
+	categoryselect = '<div><span>Sort by category</span>		    <select id="categories" name="categories" method="post" class="sort_by_category" onchange="filtering( this , this.className )">				<option value="pusto" class="filter_action">				All categories				</option><option value="pusto" class="filter_action">' + allcategories.join ('<option class="filter_action">') + '</option>' +
             '</select></div>';
 
 
-	companyselect =	'<div><span>Сортировка по категории</span>        <select id="companies" name="categories" method="post" class="sort_by_company" onchange="filtering( this , this.className)"><option value="pusto" class="filter_action">				Все компании				</option><option value="pusto" class="filter_action">' + allcompanies.join ('<option value="pusto" class="filter_action">') + '        </option>        </select>	</div>';
+	companyselect =	'<div><span>Sort by company</span>        <select id="companies" name="categories" method="post" class="sort_by_company" onchange="filtering( this , this.className)"><option value="pusto" class="filter_action">				All companies				</option><option value="pusto" class="filter_action">' + allcompanies.join ('<option value="pusto" class="filter_action">') + '        </option>        </select>	</div>';
 
-	typeselect =	'<div><span>Сортировка по типу скидки</span>		    <select id="types" name="categories" method="post" class="sort_by_type" onchange="filtering( this , this.className )"><option value="pusto" class="filter_action">				Все типы  скидок				</option><option value="pusto" class="filter_action">'  + alltypes.join ('<option class="filter_action">') +		    '</option></select>	</div><div id="buttondiv"><button id="buttonshowall" onclick="showallinfo()">Сбросить / Показать всё</button></div>';
+	typeselect =	'<div><span>Sort by type</span>		    <select id="types" name="categories" method="post" class="sort_by_type" onchange="filtering( this , this.className )"><option value="pusto" class="filter_action">				All types				</option><option value="pusto" class="filter_action">'  + alltypes.join ('<option class="filter_action">') +		    '</option></select>	</div><div id="buttondiv"><button id="buttonshowall" onclick="showallinfo()">Сбросить / Показать всё</button></div>';
 
     filter = document.getElementById('sort');
     filter.innerHTML = companyselect + categoryselect + typeselect;
         filter = document.getElementById('allsort');
-        filter.innerHTML = 'Всего найдено: ' + document.getElementsByClassName ("gs_kupon").length;
+        filter.innerHTML = 'Showing: ' + document.getElementsByClassName ("gs_kupon").length;
     }
