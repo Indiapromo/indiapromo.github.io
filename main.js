@@ -134,7 +134,7 @@ window.onload = function()
 
 	companyselect =	'<div><span>Sort by company</span>        <select id="companies" name="categories" method="post" class="sort_by_company" onchange="filtering( this , this.className)"><option value="pusto" class="filter_action">				All companies				</option><option value="pusto" class="filter_action">' + allcompanies.join ('<option value="pusto" class="filter_action">') + '        </option>        </select>	</div>';
 
-	typeselect =	'<div><span>Sort by type</span>		    <select id="types" name="categories" method="post" class="sort_by_type" onchange="filtering( this , this.className )"><option value="pusto" class="filter_action">				All types				</option><option value="pusto" class="filter_action">'  + alltypes.join ('<option class="filter_action">') +		    '</option></select>	</div><div id="buttondiv"><button id="buttonshowall" onclick="showallinfo()">Сбросить / Показать всё</button></div>';
+	typeselect =	'<div><span>Sort by type</span>		    <select id="types" name="categories" method="post" class="sort_by_type" onchange="filtering( this , this.className )"><option value="pusto" class="filter_action">				All types				</option><option value="pusto" class="filter_action">'  + alltypes.join ('<option class="filter_action">') +		    '</option></select>	</div><div id="buttondiv"><button id="buttonshowall" onclick="showallinfo()">Reset filters</button></div>';
 
     filter = document.getElementById('sort');
     filter.innerHTML = companyselect + categoryselect + typeselect;
