@@ -22,6 +22,8 @@ function showallinfo()
 
 function filtering ( e , a )
 {
+            document.getElementById("loading").style.display = "";
+
     //all_vouchers = document.getElementsByClassName('card');
     /*
     var yu = 0;
@@ -82,14 +84,9 @@ function filtering ( e , a )
 
 
     }
+            document.getElementById("loading").style.display = "none";
 
 }
-
-
-
-
-
-
 
 
 window.onload = function()
