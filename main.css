@@ -6,7 +6,8 @@
 
 .gs_image_logo
 {
-  max-width:80%;
+  max-width:40%;
+  display:block;
 }
 .ended
 {
@@ -195,7 +196,11 @@ body {
 
 @media (orientation: landscape)
 {
-
+.gs_image_logo
+{
+  max-width:40%;
+  display:block;
+}
 .ended
 {
   border: dashed 2px red;
